@@ -9,6 +9,7 @@ export default function Navbar() {
                 <ul className="navbar--links">
                     <li><a href="file:///Users/ebunoludemi/Downloads/Oludemi,%20Ebun%20Resume.pdf" target="_blank" rel="noreferrer">Resume</a></li>
                     <li><a href="https://github.com/ebunnn" target="_blank" rel="noreferrer">Github</a></li>
+                    <li><a href="https://www.linkedin.com/in/ebunoluwa-ebun-oludemi-42857b235/" target="_blank" rel="noreferrer">LinkedIn</a></li>
                 </ul>
             </div>
 
