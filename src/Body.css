@@ -1,6 +1,82 @@
 .body--name {
     color: black;
-    text-decoration: underline #090979 3px solid;
-
+    display: inline-flex;
+    justify-items: center;
+    position: relative;
+    font-family: URW Chancery L, cursive;
+    border: 2px solid white;
+    box-shadow: 5px 8px 16px 7px rgba(0,0,0,0.2);
+    padding: 12px;
 }
 
+.body--container {
+    display: inline-flex;
+    flex-direction: column;
+    align-content: center;
+    margin-top: 8%;
+}
+
+.body--elements {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.headshot--image {
+    width: 25%;
+    display: inline-flex;
+    justify-content: center;
+    position: relative;
+    right: 15%;
+    border: 10px solid white;
+    box-shadow: 5px 8px 16px 7px rgba(0,0,0,0.2);
+    border-radius: 12px;
+    /* border-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50'><defs><linearGradient id='redgradient'><stop offset='0' stop-color='%23FFC14D'/><stop offset='0.362' stop-color='%23FF4834'/><stop offset='1' stop-color='%233B0300'/></linearGradient></defs><g id='Layer_1'><path d='M0,0 L50,0 L50,50 L0,50 L0,0 z' fill='url(%23redgradient)' width='100%' height='100%'/></g></svg>") 10% stretch;
+    border-image-source: linear-gradient(to left, #090979, #00d4ff); */
+  }
+
+.body--nameAndWelcome {
+    display: inline-flex;
+    flex-direction: column;
+    color: black;
+    align-items: center;
+    margin-right: auto;
+    position: relative;
+    left: 5%;
+    max-width: 50%;
+}
+
+.body--welcomeDescription {
+    display: inline-flex;
+    border: 2px solid white;
+    box-shadow: 5px 8px 16px 7px rgba(0,0,0,0.2);
+    padding: 30px;
+    max-width: 50%;
+    
+}
+
+.body--projects {
+    color: black;
+    display: inline-flex;
+    flex-direction: column;
+    font-family: URW Chancery L, cursive;
+    align-items: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.body--projects-title {
+    border: 2px solid white;
+    box-shadow: 5px 8px 16px 7px rgba(0,0,0,0.2);
+    padding: 15px;
+    padding-right: 30px;
+    padding-left: 30px;
+    text-decoration: underline;
+}
+
+.body--sogremProject {
+    display: inline-flex;
+    flex-direction: row;
+    width: 40%;
+    align-items: center;
+}
