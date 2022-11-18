@@ -77,6 +77,18 @@
 .body--sogremProject {
     display: inline-flex;
     flex-direction: row;
-    width: 40%;
+    width: 40%; 
     align-items: center;
+}
+
+@media only screen and (max-width : 752px) {
+    .body--name {
+        font-size: 25px;
+    }
+    .body--container {
+        margin-top: 10%;
+    }
+    .body--projects-title {
+        font-size: 30px;
+    }
 }

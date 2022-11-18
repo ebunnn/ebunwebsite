@@ -17,8 +17,8 @@ export default function Body() {
                 <img className="headshot--image" alt="" src={profImage}/>
             </div>
             <div className="body--projects">
-                <h1 className="body--projects-title">Projects I am proud of</h1>
-                <img className="body--sogremProject" src={sogremimg} alt=""/>
+                <h1 className="body--projects-title">Project I am proud of</h1>
+                <p><a className="body--sogremProjectLink" href="https://www.sogrem.com" target="_blank" rel="noreferrer"><img className="body--sogremProject" src={sogremimg} alt="Professional Headshot"/></a></p>
             </div>
         </div>
     )
