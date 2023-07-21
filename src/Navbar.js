@@ -1,18 +1,84 @@
-import React from "react";
+import { React, useRef } from "react";
+import {Link} from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Navbar.css"
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 export default function Navbar() {
+
+    const navRef = useRef();
+    const responsiveNavClass = "responsive_nav";
+
+    const showNavBar = () => {
+        navRef.current.classList.toggle(responsiveNavClass);
+    }
+
     return (
         <navbar className="navbar--container">
-            <h3 className="navbar--logo">Ebun Oludemi</h3>
-            <div className="navbar--links-div">
+            <h3 className="navbar--logo"><a><Link to="/">Ebun Oludemi</Link></a></h3>
+            <div className={`navbar--links-div ${responsiveNavClass}`} ref={navRef}>
                 <ul className="navbar--links">
-                    <li><a href="file:///Users/ebunoludemi/Downloads/Oludemi,%20Ebun%20Resume.pdf" target="_blank" rel="noreferrer">Resume</a></li>
+                    <li><a href="https://drive.google.com/file/d/1PBbaCyQ7fthhXzX0sULc2qPQbUZvfY_0/view?usp=sharing" target="_blank" rel="noreferrer">Resume</a></li>
                     <li><a href="https://github.com/ebunnn" target="_blank" rel="noreferrer">Github</a></li>
-                    <li><a href="https://www.linkedin.com/in/ebunoluwa-ebun-oludemi-42857b235/" target="_blank" rel="noreferrer">LinkedIn</a></li>
+                    <li><a href="https://linkedin.com/in/ebun-oludemi" target="_blank" rel="noreferrer">LinkedIn</a></li>
+                    <li><a><Link to="/Projects">Projects</Link></a></li>
                 </ul>
+                <button className="navbar--bars navbar--close" onClick={showNavBar}> 
+                        <FontAwesomeIcon icon={faTimes} />
+                </button>
             </div>
+            <button className="navbar--bars" onClick={showNavBar}>
+                <FontAwesomeIcon icon={faBars} />
+            </button>
 
         </navbar>
     )
 }
+
+// import React, { useState } from "react";
+// import { Link } from "react-router-dom";
+// import "./Navbar.css";
+
+// export default function Navbar() {
+//   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+//   const toggleMobileMenu = () => {
+//     setMobileMenuOpen(!mobileMenuOpen);
+//   };
+
+//   return (
+//     <nav className="navbar--container">
+//       <h3 className="navbar--logo">
+//         <Link to="/">Ebun Oludemi</Link>
+//       </h3>
+//       <div className="navbar--menu-bars" onClick={toggleMobileMenu}>
+//         <i className={mobileMenuOpen ? "material-icons-outlined open" : "material-icons-outlined"}>
+//           {mobileMenuOpen ? "close" : "menu"}
+//         </i>
+//       </div>
+//       <div className={`navbar--links-div ${mobileMenuOpen ? "open" : ""}`}>
+//         <ul className="navbar--links">
+//           <li>
+//             <a href="https://drive.google.com/file/d/1PBbaCyQ7fthhXzX0sULc2qPQbUZvfY_0/view?usp=sharing" target="_blank" rel="noreferrer">
+//               Resume
+//             </a>
+//           </li>
+//           <li>
+//             <a href="https://github.com/ebunnn" target="_blank" rel="noreferrer">
+//               Github
+//             </a>
+//           </li>
+//           <li>
+//             <a href="https://linkedin.com/in/ebun-oludemi" target="_blank" rel="noreferrer">
+//               LinkedIn
+//             </a>
+//           </li>
+//           <li>
+//             <Link to="/Projects">Projects</Link>
+//           </li>
+//         </ul>
+//       </div>
+//     </nav>
+//   );
+// }
+

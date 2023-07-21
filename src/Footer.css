@@ -1,13 +1,25 @@
 .footer--container {
     color: white;
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);;
-    height: 100px;
+    background: rgba(216, 191, 216, 0.8);
+    height: 150px;
     width: 100%;
     font-size: 15px;
-    /* position: absolute;
-    bottom: 0; */
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
+.footer--social-icons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .footer--icon {
+    font-size: 24px;
+    color: #555;
+  }
+  
+  .footer--icon:hover {
+    color: #000;
+  }

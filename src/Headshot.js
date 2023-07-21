@@ -1,6 +1,6 @@
 import React from "react";
 import "./Headshot.css"
-import profImage from "./images/Professional_Pic.jpg"
+import profImage from "./images/Headshot.jpg"
 
 export default function Headshot() {
     return (

@@ -1,0 +1,11 @@
+.projects--title {
+    color: rgba(148, 100, 148, 0.8);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.projects--image1 {
+    width: 25%;
+    display: inline-flex;
+    justify-content: left;
+}
+
