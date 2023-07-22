@@ -24,10 +24,10 @@ a {
 }
 
 .projectCard--elements2 {
-    display: flex;
+    display: inline-flex;
     flex-direction: row;   
     gap: 2%;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .projectCard--description {
@@ -35,11 +35,27 @@ a {
     flex-direction: row;
     flex: 1;
     text-align: left;
+    padding: 1%;
 }
   
-
+.projectCard--description p {
+    padding-right: 5%;
+}
 .projectCard--title {
     color: rgba(148, 100, 148, 0.8);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     text-align: left;
 }
+
+@media only screen and (max-width : 900px) {
+    .projectCard--elements1 {
+        align-items: center;
+    }
+    .projectCard--elements2 {
+        flex-direction: column;
+    }
+    .projectCard--description {
+        text-align: center;
+    }
+}
+

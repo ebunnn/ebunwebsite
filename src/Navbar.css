@@ -70,9 +70,10 @@
     cursor: pointer;
     padding: 5px;
     background-color: var(--navbar--container);
-    padding-right: 10px;
+    padding-right: 15px;
     visibility: hidden;
     opacity: 0;
+    font-size: 100%;
   }
 
 

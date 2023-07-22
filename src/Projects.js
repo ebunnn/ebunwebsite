@@ -42,10 +42,6 @@ export default function Projects() {
       <ProjectCard title="API News Search" image={newsImg} description={newsAPIDescription} projectLink="https://github.com/ebunnn/news-search-api" clickMe={handleNewsImg}/>
 
       <ProjectCard title="Ebun Oludemi Portfolio Website" image={ebunWeb} description={ebunWebDescription} projectLink="https://github.com/ebunnn/ebunwebsite"/>
-
-      <ProjectCard title="Sogrem Associates Website" image={sogrem} description="This is a paragraph" projectLink="www.sogrem.com"/>
-
-      {/* <img className="projects--image1" alt="" src={profImage}/> */}
       
     </div>
   );
