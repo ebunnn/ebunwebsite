@@ -1,15 +1,15 @@
 import React from "react";
 import "./Body.css"
+import { Helmet } from 'react-helmet';
+// import { ElfsightWidget } from 'react-elfsight-widget';
 import profImage from "./images/Headshot.jpg"
+
 
 export default function Body() {
 
-    // const [displayName, setDisplayName] = React.useState("") 
-
-    // const handleDisplayName = (event) => {
-    //     event.preventDefault();
-    //     setDisplayName(event.target.elements.name.value);
-    //}
+    // function Component() {
+    //     return <ElfsightWidget widgetId="225e036c-006b-4e86-bf3f-46271e0253dd" />;
+    //   }
     return (
         <div className="body--container">
             <div className="body--elements">
@@ -21,14 +21,15 @@ export default function Body() {
                 </div>
                 <img className="headshot--image" alt="" src={profImage}/>
             </div>
-            {/* <form className="body-nameInputContainer" onSubmit={handleDisplayName}>
-                <label>
-                    Please Enter Your Name:
-                    <input type="text" name="name" value={displayName} onChange={(e) => setDisplayName(e.target.value)}/>
-                </label>
-                <input type="submit" value="Submit"/>
-            </form>
-            <h1 style={{color: "Black"}}>{{displayName} == "" ? "Hello!" : `Hello ${displayName}!`} </h1> */}
+            <Helmet>
+                <script src="https://static.elfsight.com/platform/platform.js" defer />
+            </Helmet>
+            <div className="elfsight-app-225e036c-006b-4e86-bf3f-46271e0253dd"></div>
+            {/* <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+            <div class="elfsight-app-225e036c-006b-4e86-bf3f-46271e0253dd"></div>
+            <Helmet>
+                <script src="https://your-elfsight-widget-url.com/225e036c-006b-4e86-bf3f-46271e0253dd.js" defer />
+            </Helmet> */}
             <br></br>
             <br></br>
             <br></br>
