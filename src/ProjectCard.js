@@ -1,7 +1,7 @@
 import React from "react";
 import "./ProjectCard.css";
 
-const ProjectCard = (props) => {
+export default function ProjectCard(props) {
     return (
         <div>
             <div className="projectCard--container">
@@ -10,7 +10,7 @@ const ProjectCard = (props) => {
                     <div className="projectCard--elements2">
                         <img className="projects--image1" alt="" src={props.image}/>
                         <div className="projectCard--description">
-                            <p>{props.description}</p>
+                            <p>{props.description} <a href={props.projectLink} target="_blank" rel="noreferrer"><br></br>Link to project</a></p>
                         </div>
                     </div>
                 </div>
@@ -21,4 +21,3 @@ const ProjectCard = (props) => {
     )
 }
 
-export default ProjectCard;

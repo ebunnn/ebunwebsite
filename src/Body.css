@@ -3,12 +3,7 @@
     color: rgba(148, 100, 148, 0.8);
     display: inline-flex;
     justify-items: center;
-    position: relative;
-    border: 2px solid white;
-    box-shadow: 5px 8px 16px 7px rgba(0,0,0,0.2);
-    padding: 12px;
-    text-shadow: 2px 2px 4px rgba(216, 191, 216, 0.4);
-    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); */
+    text-shadow: 2px 2px 4px rgba(216, 191, 216, 1);
 }
 
 .body--container {
@@ -31,7 +26,7 @@
     margin-right: auto;
     border: 10px solid white;
     box-shadow: 5px 8px 16px 7px rgba(0,0,0,0.2);
-    border-radius: 12px;
+    border-radius: 50%;
   }
 
 .body--nameAndWelcome {
@@ -40,7 +35,7 @@
     color: rgba(148, 100, 148, 0.8);
     align-items: center;
     margin-right: auto;
-    max-width: 50%;
+    max-width: 58%;
     text-shadow: 2px 2px 4px rgba(216, 191, 216, 0.4);
 }
 
@@ -53,48 +48,16 @@
     
 }
 
-.body--projects {
-    color: rgba(148, 100, 148, 0.8);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10%;
-    margin-bottom: 5%;
+.body-nameInputContainer {
+    color: black;
 }
 
-.body--projects-title {
-    border: 2px solid white;
-    box-shadow: 5px 8px 16px 7px rgba(0,0,0,0.2);
-    padding: 15px;
-    padding-right: 30px;
-    padding-left: 30px;
-}
-
-.body--sogremProject {
-    display: inline-flex;
-    flex-direction: row;
-    width: 40%; 
-    align-items: center;
-}
-
-.body--sogremProjectDescription {
-    margin-top: -1%;
-    border: 2px solid white;
-    box-shadow: 5px 8px 16px 7px rgba(0,0,0,0.2);
-    padding: 25px;
-}
-
-@media only screen and (max-width : 894px) {
+@media only screen and (max-width : 967px) {
     .body--name {
         font-size: 35px;
     }
-    .body--container {
-        margin-top: 9%;
-    }
-    .body--projects-title {
-        font-size: 35px;
-    }
+}
+@media only screen and (max-width : 894px) {
     .body--welcomeDescription {
         max-width: 70%;
     }
@@ -103,36 +66,17 @@
         right: 8%;
     }
 }
-@media only screen and (max-width : 805px) {
-    .body--name {
-        font-size: 30px;
-    }
-}
 
-@media only screen and (max-width : 763px) {
-    .body--name {
-        font-size: 27px;
+@media only screen and (max-width : 720px) {
+    .body--elements {
+        flex-direction: column-reverse;
     }
-    .body--container {
-        margin-top: 13%;
+    .headshot--image {
+        margin-right: 0;
     }
-    .body--projects-title {
-        font-size: 30px;
-    }
-    .body--welcomeDescription {
-        font-size: 20px;
-    }
-}
-
-@media only screen and (max-width : 625px) {
-    .body--name {
-        font-size: 20px;
-    }
-    .body--container {
-        margin-top: 13%;
-    }
-    .body--projects-title {
-        font-size: 30px;
+    .body--nameAndWelcome {
+        margin-right: 0;
+        max-width: 100%;
     }
     .body--welcomeDescription {
         font-size: 20px;
@@ -141,30 +85,11 @@
 }
 
 @media only screen and (max-width : 500px) {
-    .body--container {
-        margin-top: 20%;
+    .body--name {
+        font-size: 30px;
     }
 }
 
-@media only screen and (max-width: 471px) {
-    .body--container {
-      margin-top: 70px; /* Adjust margin for responsiveness */
-    }
-  }
-/* @media only screen and (max-width : 471px) {
-    
-    .body--elements {
-        display: inline-flex;
-        flex-direction: column-reverse;
-    }
-    .body--nameAndWelcome {
-        display: flex;
-        max-width: none;
-        left: auto;
-    }
-    .headshot--image {
-        position: inherit;
-        width: 45%;
-    }
-} */
+
+
 
