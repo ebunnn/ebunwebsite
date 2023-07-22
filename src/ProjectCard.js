@@ -8,7 +8,7 @@ export default function ProjectCard(props) {
                 <div className="projectCard--elements1">
                     <h3 className="projectCard--title">{props.title}</h3>
                     <div className="projectCard--elements2">
-                        <img className="projects--image1" alt="" src={props.image}/>
+                        <img className="projects--image1" alt="" src={props.image} onClick={props.clickMe}/>
                         <div className="projectCard--description">
                             <p>{props.description} <a href={props.projectLink} target="_blank" rel="noreferrer"><br></br>Link to project</a></p>
                         </div>
