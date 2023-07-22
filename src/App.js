@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import Body from './Body';
@@ -8,7 +8,7 @@ import Projects from './Projects';
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <header className="App-header">
           <Navbar />
           <Routes>
@@ -17,9 +17,10 @@ function App() {
           </Routes>
           <Footer />
         </header>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
 
 export default App;
+

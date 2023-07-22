@@ -35,7 +35,7 @@ export default function Projects() {
   return (
     <div>
       <h1 className="projects--title">My Projects!</h1>
-      <ProjectCard title="Sogrem Associates Website" image={sogrem} description={sogremDescription} projectLink="www.sogrem.com"/>
+      <ProjectCard title="Sogrem Associates Website" image={sogrem} description={sogremDescription} projectLink="https://sogrem.com"/>
 
       <ProjectCard title="PrepAI Website" image={prepAI} description={prepAIDescription} projectLink="https://github.com/rdl4199/BuffPrepAI"/>
 

@@ -21,7 +21,7 @@ export default function Navbar() {
                     <li><a href="https://drive.google.com/file/d/1PBbaCyQ7fthhXzX0sULc2qPQbUZvfY_0/view?usp=sharing" target="_blank" rel="noreferrer">Resume</a></li>
                     <li><a href="https://github.com/ebunnn" target="_blank" rel="noreferrer">Github</a></li>
                     <li><a href="https://linkedin.com/in/ebun-oludemi" target="_blank" rel="noreferrer">LinkedIn</a></li>
-                    <li><a><Link to="/Projects">Projects</Link></a></li>
+                    <li><a href="javascript:void(0);"><Link to="/Projects">Projects</Link></a></li>
                 </ul>
                 <button className="navbar--bars navbar--close" onClick={showNavBar}> 
                         <FontAwesomeIcon icon={faTimes} />
@@ -34,4 +34,5 @@ export default function Navbar() {
         </navbar>
     )
 }
+
 
