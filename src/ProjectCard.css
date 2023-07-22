@@ -10,8 +10,8 @@ a {
     border: 2px solid white;
     box-shadow: 5px 8px 16px 7px rgba(0,0,0,0.2);
     width: 80%;
-    justify-content: center; /* Center vertically */
-    align-items: center; /* Center horizontally */
+    justify-content: center; 
+    align-items: center; 
     margin: 0 auto;
 }
 
