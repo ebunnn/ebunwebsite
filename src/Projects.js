@@ -16,7 +16,7 @@ export default function Projects() {
   }
   const sogremDescription = "Sogrem Associates Website represents one of my earliest achievements in\
   web development. Created using ReactJS, this professional platform served the tax service \
-  company, \"Sogrem Associates\" providing a them with an online presence."
+  company, \"Sogrem Associates\" providing them with an online presence."
 
   const prepAIDescription = "During a hackathon event, our team presented an innovative\
   learning platform named \"PrepAI\", designed to revolutionize the educational experience for\
@@ -41,7 +41,7 @@ export default function Projects() {
 
       <ProjectCard title="API News Search" image={newsImg} description={newsAPIDescription} projectLink="https://github.com/ebunnn/news-search-api" clickMe={handleNewsImg}/>
 
-      <ProjectCard title="Ebun Oludemi Portfolio Website" image={ebunWeb} description={ebunWebDescription} projectLink="https://github.com/ebunnn/ebunwebsite"/>
+      <ProjectCard title="Ebun Oludemi Portfolio Website" image={ebunWeb} description={ebunWebDescription} projectLink="https://ebunnn.github.io/ebunwebsite/"/>
       
     </div>
   );

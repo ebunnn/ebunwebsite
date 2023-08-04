@@ -15,7 +15,7 @@ export default function Footer() {
                 <a href="https://linkedin.com/in/ebun-oludemi" target="_blank" rel="noreferrer">
                 <FontAwesomeIcon icon={faLinkedin} className="footer--icon" />
                 </a>
-                <a href="https://github.com/ebunnn/ebunwebsite" target="_blank" rel="noreferrer">
+                <a href="https://ebunnn.github.io/ebunwebsite/" target="_blank" rel="noreferrer">
                 <FontAwesomeIcon icon={faGlobe} className="footer--icon" />
                 </a>
             </div>

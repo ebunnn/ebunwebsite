@@ -14,7 +14,7 @@ export default function Body() {
                     I am self-driven and ambitious student with a passion to learn and create new things through coding.
                     </p>
                 </div>
-                <img className="headshot--image" alt="" src={profImage}/>
+                <img className="headshot--image" alt="" loading="lazy" src={profImage}/>
             </div>
             <div className="body--contact">
                 <Helmet>
