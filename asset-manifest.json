@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/ebunwebsite/static/css/main.7fe6ea44.css",
+    "main.js": "/ebunwebsite/static/js/main.e1b22c89.js",
+    "static/js/787.44a85303.chunk.js": "/ebunwebsite/static/js/787.44a85303.chunk.js",
+    "static/media/sogremSS.png": "/ebunwebsite/static/media/sogremSS.cbcaac989ca55dea91f0.png",
+    "static/media/prepAIimg.png": "/ebunwebsite/static/media/prepAIimg.ece1002b22dc15e5dc99.png",
+    "static/media/Headshot.jpg": "/ebunwebsite/static/media/Headshot.c2365247a766caaac0e0.jpg",
+    "static/media/ebunWebImg.png": "/ebunwebsite/static/media/ebunWebImg.420a5d59ca02ffc2aee1.png",
+    "static/media/newsImg.png": "/ebunwebsite/static/media/newsImg.3394d03c25a53150bce4.png",
+    "static/media/newsSearchImg.png": "/ebunwebsite/static/media/newsSearchImg.3245ee45984d9f3756ab.png",
+    "index.html": "/ebunwebsite/index.html",
+    "main.7fe6ea44.css.map": "/ebunwebsite/static/css/main.7fe6ea44.css.map",
+    "main.e1b22c89.js.map": "/ebunwebsite/static/js/main.e1b22c89.js.map",
+    "787.44a85303.chunk.js.map": "/ebunwebsite/static/js/787.44a85303.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7fe6ea44.css",
+    "static/js/main.e1b22c89.js"
+  ]
+}
