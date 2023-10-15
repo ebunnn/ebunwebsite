@@ -1,0 +1,21 @@
+/* Styles for the container */
+.Login--welcome {
+    display: inline-flex;
+    flex-direction: column;
+    border: 2px solid white;  /* Border for the container */
+    box-shadow: 5px 8px 16px 7px rgba(0,0,0,0.2);
+    width: 80%;
+    justify-content: center; 
+    align-items: center; 
+    margin: 0 auto;
+    padding: 20px;  /* Padding for the container */
+    background-color: black;
+    
+}
+
+
+/* Additional style for the Google button */
+.Login--loginGoogleBtn {
+    margin-top: 20px;  /* Optional margin for the button */
+}
+
