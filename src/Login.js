@@ -27,9 +27,9 @@ export default function Login({setIsAuth}) {
     return(
         <div>
             <div className='Login--welcome'>
-                <h4>Welcome to the Login Page!</h4>
+                <h2>Welcome to the Login Page!</h2>
             </div>
-            <div className='Login--googleButtonContainer'>
+            <div>
                 {/* Calls signInWithGoogle func when button is clicked */}
                 <a className='Login--loginGoogleBtn' onClick={signInWithGoogle} style={{textDecoration:"none"}}><GoogleButton
                 onClick={() => { console.log('Google button clicked') }}
