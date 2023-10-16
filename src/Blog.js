@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import "./Blog.css"
 import {Link} from "react-router-dom";
-import { collection, getDocs } from "firebase/firestore";
-import {db } from "./firebase-config"
+import { collection, deleteDoc, getDocs, doc } from "firebase/firestore";
+import {db, auth } from "./firebase-config"
 
 
 export default function Blog({isAuth}) {
@@ -16,7 +16,13 @@ export default function Blog({isAuth}) {
             setPostList(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
         };
         getPosts();
-    })
+    });
+
+    const deletePost = async (id) => {
+        const postDoc = doc(db, "blogPosts", id);
+
+        await deleteDoc(postDoc);
+    };
     return(
         <div className="Blog--container">
             <h3 className="Blog--welcome">Welcome to blog page!</h3>
@@ -26,6 +32,9 @@ export default function Blog({isAuth}) {
                 return (
                     <div>
                         <div className="Blog--title">{post.title}</div>
+                        <div className="Blog--deletePost">
+                            {isAuth && post.author.id === auth.currentUser.uid && <button onClick={() => {deletePost(post.id)}}>Delete</button>}
+                        </div>
                         <div className="Blog--postText">
                             <p>{post.postText}</p>
                             <h5>Written by: {post.author.name}</h5>

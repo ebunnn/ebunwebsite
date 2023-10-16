@@ -13,7 +13,7 @@ import { useState } from 'react';
 function App() {
 
   // state to determine if the user is logged in
-  const [isAuth, setIsAuth] = useState(false);
+  const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
   return (
     <div className="App">
       <HashRouter>
@@ -25,7 +25,7 @@ function App() {
             {/* Passing isAuth in as props */}
             <Route path="/blog" element={<Blog isAuth={isAuth}/>} />
             <Route path="/login" element={<Login setIsAuth={setIsAuth}/>} />
-            <Route path="/create-blog-post" element={<CreateBlogPost />} />
+            <Route path="/create-blog-post" element={<CreateBlogPost isAuth={isAuth}/>} />
           </Routes>
           <Footer />
         </header>
