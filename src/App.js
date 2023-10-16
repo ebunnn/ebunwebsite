@@ -12,6 +12,7 @@ import { useState } from 'react';
 
 function App() {
 
+  // state to determine if the user is logged in
   const [isAuth, setIsAuth] = useState(false);
   return (
     <div className="App">
@@ -21,9 +22,10 @@ function App() {
           <Routes>
             <Route path="/" element={<Body />} />
             <Route path="/projects" element={<Projects />} />
-            <Route path="/blog" element={<Blog />} />
+            {/* Passing isAuth in as props */}
+            <Route path="/blog" element={<Blog isAuth={isAuth}/>} />
             <Route path="/login" element={<Login setIsAuth={setIsAuth}/>} />
-
+            <Route path="/create-blog-post" element={<CreateBlogPost />} />
           </Routes>
           <Footer />
         </header>

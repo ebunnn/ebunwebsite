@@ -1,4 +1,5 @@
 import React from 'react';
+import "./Login.css"
 import {auth, provider} from "./firebase-config";
 //Allows for popup authentication. 
 import {signInWithPopup} from 'firebase/auth';
