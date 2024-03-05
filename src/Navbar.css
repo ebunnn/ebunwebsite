@@ -1,13 +1,15 @@
+
 .navbar--container {
   display: inline-flex;
   position: sticky;
   top: 0;
   flex-direction: row;
   color: white;
-  background: rgba(216, 191, 216, 1);
+  background: #222831;
   height: 70px;
   width: 100%;
   left: 0;
+  z-index: 1000;
 }
 
 .navbar--logo {
@@ -15,14 +17,16 @@
     align-items: center;
     margin-right: auto;
     position: relative;
-    left: 20px;
+    left: 1.5vw;
+    font-size: 90%;
 }
 
 .navbar--logo a {
-    text-decoration: none;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    color: rgba(148, 100, 148, 0.8);
+  text-decoration: none;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  color: white;
 }
+
 .navbar--logo a:hover {
     text-decoration: none;
 }
@@ -40,28 +44,37 @@
     flex-direction: row;
     list-style: none;
     position: absolute;
-    right: 15px;
+    right: 1.5vw;
+    font-size: 70%;
   }
   
   .navbar--links li:not(:last-child) {
     margin-right: 10px; 
   }
   
-  .navbar--links a {
+  /* .navbar--links a {
     text-decoration: none;
     color: rgba(148, 100, 148, 0.8);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  }
+  } */
   
+  .navbar--links a {
+    text-decoration: none;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+ .navbar--links a:visited {
+  color: white;
+ }
   
 a:visited {
     text-decoration: none;
-    color: rgba(148, 100, 148, 0.8);
   }
   
 a:hover {
-    text-decoration: underline;
-  }
+  color: lightgray;
+}
 
 .navbar--bars {
   border: none;

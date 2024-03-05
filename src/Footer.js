@@ -5,6 +5,8 @@ import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import "./Footer.css"
 
 export default function Footer() {
+
+    
     return(
         <footer className="footer--container">
             <p className="footer--copyright">© Ebunoluwa Oludemi</p>

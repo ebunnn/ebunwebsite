@@ -1,14 +1,16 @@
 a {
     text-decoration: none;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    color: rgba(148, 100, 148, 0.8);
+    color: rgba(216, 191, 216, 0.8);
 }
 
 .projectCard--container {
     display: flex;
     flex-direction: column;
-    border: 2px solid white;
-    box-shadow: 5px 8px 16px 7px rgba(0,0,0,0.2);
+    /* border: 2px solid white; */
+    box-shadow: 5px 8px 16px 7px rgba(0,0,0,0.4);
+    border-radius: 25px;
+    background: rgba(57, 62, 70, 0.5);
     width: 80%;
     justify-content: center; 
     align-items: center; 
@@ -20,7 +22,7 @@ a {
     flex-direction: column;
     margin-left: 3%;
     padding-bottom: 3%;
-    color: black;
+    color: white;
 }
 
 .projectCard--elements2 {
@@ -42,7 +44,7 @@ a {
     padding-right: 5%;
 }
 .projectCard--title {
-    color: rgba(148, 100, 148, 0.8);
+    color: rgba(216, 191, 216, 0.8);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     text-align: left;
 }

@@ -2,20 +2,40 @@
 .Login--welcome {
     display: inline-flex;
     flex-direction: column;
-    border: 2px solid white;  /* Border for the container */
+    border: 2px solid rgba(216, 191, 216, 1);  
     box-shadow: 5px 8px 16px 7px rgba(0,0,0,0.2);
-    width: 80%;
+    width: 35vw;
+    height: 40vh;
     justify-content: center; 
     align-items: center; 
     margin: 0 auto;
-    padding: 20px;  /* Padding for the container */
-    background-color: black;
-    
+    padding: 20px;  
+    color: black;
+    background: rgba(216, 191, 216, 1);
 }
 
-
-/* Additional style for the Google button */
-.Login--loginGoogleBtn {
-    margin-top: 20px;  /* Optional margin for the button */
+.Login--googleContainer {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    border: 2px solid white;  
+    box-shadow: 5px 8px 16px 7px rgba(0,0,0,0.2);
+    width: 30vw;
+    color: black;
+    height: 45vh;
 }
 
+.Login--container {
+    display: inline-flex;
+    margin-top: 15vh;
+}
+
+.Login--insideContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Login--logo {
+    width: 22%;
+}

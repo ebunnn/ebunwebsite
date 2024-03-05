@@ -1,3 +1,154 @@
-.Blog--container {
-    color: black;
+.blog--container {
+    color: white;    
 }
+
+.blog--welcome {
+    color: rgba(216, 191, 216, 0.8);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.blog--description {
+    font-size: 0.7em;
+}
+
+.blog--title {
+    color: rgba(216, 191, 216, 0.8);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.blog--createPostButton {
+  appearance: button;
+  background-color: rgba(216, 191, 216, 0.4);
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: din-round,sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 100%;
+  width: 15vw;
+}
+
+.blog--createPostButton a {
+    color: white;
+}
+.blog--createPostButton:after {
+    background-clip: padding-box;
+    background-color: rgba(216, 191, 216, 0.8);
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    bottom: -4px;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+  }
+
+.blog--createPostButton:main,
+.blog--createPostButton:focus {
+  user-select: auto;
+}
+
+.blog--createPostButton:hover:not(:disabled) {
+    filter: brightness(1.1);
+    -webkit-filter: brightness(1.1);
+  }
+  
+.blog--createPostButton:disabled {
+    cursor: auto;
+  }
+  
+.blog--createPostButton:active {
+    border-width: 4px 0 0;
+    background: none;
+  }
+
+.blog--postDetails {
+  display: inline-flex;
+  gap: 2vw;
+}
+
+
+.blog--deletePost {
+  appearance: button;
+  background-color: rgba(216, 191, 216, 0.4);
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: din-round,sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  height: 8vh;
+}
+
+.blog--deletePost a {
+    color: white;
+}
+.blog--deletePost:after {
+    background-clip: padding-box;
+    background-color: rgba(216, 191, 216, 0.8);
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    bottom: -4px;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+  }
+
+.blog--deletePost:main,
+.blog--deletePost:focus {
+  user-select: auto;
+}
+
+.blog--deletePost:hover:not(:disabled) {
+    filter: brightness(1.1);
+    -webkit-filter: brightness(1.1);
+  }
+  
+.blog--deletePost:disabled {
+    cursor: auto;
+  }

@@ -1,9 +1,11 @@
 
 .body--name {
-    color: rgba(148, 100, 148, 0.8);
+    color: rgba(216, 191, 216, 0.8);
     display: inline-flex;
     justify-items: center;
-    text-shadow: 2px 2px 4px rgba(216, 191, 216, 1);
+    text-shadow: 5px 8px 16px 7px rgba(0,0,0,0.2);
+    font-size: 5rem;
+    
 }
 
 .body--container {
@@ -16,6 +18,83 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    padding: 4vw;
+    padding-top: 0vh;
+}
+
+.body--words {
+    display: inline-flex;
+    flex-direction: column;
+    position: relative;
+    left: 4vw;
+}
+
+
+/* CSS */
+.body--button {
+  appearance: button;
+  background-color: rgba(216, 191, 216, 0.4);
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: din-round,sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 100%;
+  width: 15vw;
+}
+
+.body--button:after {
+  background-clip: padding-box;
+  background-color: rgba(216, 191, 216, 0.8);
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.body--button:main,
+.body--button:focus {
+  user-select: auto;
+}
+
+.body--button:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+.body--button:disabled {
+  cursor: auto;
+}
+
+.body--button:active {
+  border-width: 4px 0 0;
+  background: none;
 }
 
 .headshot--image {
@@ -24,37 +103,39 @@
     margin-top: 70px;
     justify-content: center;
     margin-right: auto;
-    border: 10px solid white;
-    box-shadow: 5px 8px 16px 7px rgba(0,0,0,0.2);
-    border-radius: 50%;
+    border-width: 0;
+    border-radius: 20%;
+    -webkit-filter: drop-shadow(12px 12px 12px rgba(255, 255, 255, 0.2));
+    filter: drop-shadow(12px 12px 12px rgba(255, 255, 255, 0.155));
+    position: relative;
+    right: 4vw;
+    /* box-shadow: 5px 8px 16px 7px rgba(255, 255, 255, 0.2) */
   }
 
-.body--nameAndWelcome {
-    display: inline-flex;
-    flex-direction: column;
-    color: rgba(148, 100, 148, 0.8);
-    align-items: center;
-    margin-right: auto;
-    max-width: 58%;
-    text-shadow: 2px 2px 4px rgba(216, 191, 216, 0.4);
+  .body--space {
+    font-size: 20vh;
+  }
+
+.body--hi {
+    margin-bottom: -7vh;
+    font-size: 90%;
+    margin-left: 0.3vw;
+    text-align: left;
 }
+
 
 .body--welcomeDescription {
     display: inline-flex;
-    border: 2px solid white;
-    box-shadow: 5px 8px 16px 7px rgba(0,0,0,0.2);
-    padding: 30px;
-    max-width: 50%;
-    
+    max-width: 70%;
+    font-size: 60%;
+    margin-top: -5vh;
+    text-align: left;
 }
 
-.body-nameInputContainer {
-    color: black;
-}
 
-.elfsight-app-225e036c-006b-4e86-bf3f-46271e0253dd {
+/* .elfsight-app-225e036c-006b-4e86-bf3f-46271e0253dd {
     margin-top: 10%;
-}
+} */
 @media only screen and (max-width : 967px) {
     .body--name {
         font-size: 35px;
@@ -93,10 +174,10 @@
     }
 }
 
-@media only screen and (max-width : 450px) {
+/* @media only screen and (max-width : 450px) {
     .elfsight-app-225e036c-006b-4e86-bf3f-46271e0253dd {
         padding: 20%;
     }
-}
+} */
 
 

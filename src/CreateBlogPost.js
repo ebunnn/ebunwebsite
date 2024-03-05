@@ -5,9 +5,11 @@ import { db, auth } from "./firebase-config";
 import { useNavigate } from "react-router-dom";
 
 export default function CreateBlogPost({ isAuth }) {
-   // States for title and post tect
+   // States for title and post text
   const [title, setTitle] = useState("");
   const [postText, setPostText] = useState("");
+  var currentTime = new Date();
+  var currentDate = new Date().toDateString();
 
   // this is how you identify the collection you want to add to
   const postsCollectionRef = collection(db, "blogPosts");
@@ -21,6 +23,8 @@ export default function CreateBlogPost({ isAuth }) {
       title,
       postText,
       author: { name: auth.currentUser.displayName, id: auth.currentUser.uid },
+      time: currentTime.getHours().toString().concat(":").concat(currentTime.getMinutes().toString()),
+      date: currentDate,
     });
     navigate("/blog");
   };

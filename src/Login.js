@@ -1,5 +1,6 @@
 import React from 'react';
 import "./Login.css"
+import logopng from "./images/Ebun Web Logo trans.png"
 import {auth, provider} from "./firebase-config";
 //Allows for popup authentication. 
 import {signInWithPopup} from 'firebase/auth';
@@ -14,7 +15,7 @@ export default function Login({setIsAuth}) {
     //Function to sign in w/ google
     const signInWithGoogle = () => {
         //"provider" is to specify that we are using Google to authenticate. 
-        // "then" is to specify what we do when we login to Google. "return" contains
+        // "then" is to specify what we do when we login to Google. "result" contains
         // all the information about user that is logged in.
         signInWithPopup(auth, provider).then((result) => {
             //If tabs/browser is closed, this will allow you to still be logged in
@@ -25,19 +26,22 @@ export default function Login({setIsAuth}) {
             navigate("/");
         })
     }
-    return(
-        <div>
-            <div className='Login--welcome'>
-                <h2>Welcome to the Login Page!</h2>
+    return (
+        <div className='Login--container'>
+            <div className='Login--insideContainer'>
+                <div className='Login--welcome'>
+                    <img className='Login--logo' src={logopng} alt=''/>
+                    <h2>Welcome to the Login Page!</h2>
+                </div>
+                <div className='Login--googleContainer'>
+                    <h4>Log in</h4>
+                    {/* Calls signInWithGoogle func when button is clicked */}
+                    <a className='Login--loginGoogleBtn' onClick={signInWithGoogle} style={{textDecoration:"none"}}><GoogleButton
+                    label='Log in with Google'
+                    onClick={() => { console.log('Google button clicked') }}
+                    /></a>
+                </div>
             </div>
-            <div>
-                {/* Calls signInWithGoogle func when button is clicked */}
-                <a className='Login--loginGoogleBtn' onClick={signInWithGoogle} style={{textDecoration:"none"}}><GoogleButton
-                onClick={() => { console.log('Google button clicked') }}
-                /></a>
-            </div>
-
-            
         </div>
     )
 }

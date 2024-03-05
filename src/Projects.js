@@ -42,7 +42,7 @@ export default function Projects() {
   return (
     <div>
       <h1 className="projects--title">My Projects!</h1>
-      <p style={{color: "black"}}>Here are *some* of my projects!</p>
+      <p style={{color: "white"}}>Here are *some* of my projects!</p>
       <ProjectCard title="Sogrem Associates Website" image={sogrem} description={sogremDescription} projectLink="https://sogrem.com"/>
 
       <ProjectCard title="PrepAI Website" image={prepAI} description={prepAIDescription} projectLink="https://github.com/rdl4199/BuffPrepAI"/>
