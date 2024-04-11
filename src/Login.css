@@ -12,6 +12,8 @@
     padding: 20px;  
     color: black;
     background: rgba(216, 191, 216, 1);
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
 }
 
 .Login--googleContainer {

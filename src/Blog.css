@@ -87,6 +87,7 @@
 .blog--postDetails {
   display: inline-flex;
   gap: 2vw;
+  align-items: center;
 }
 
 
@@ -118,7 +119,7 @@
   -webkit-user-select: none;
   vertical-align: middle;
   white-space: nowrap;
-  height: 8vh;
+  height: 6vh;
 }
 
 .blog--deletePost a {
@@ -139,16 +140,8 @@
     z-index: -1;
   }
 
-.blog--deletePost:main,
-.blog--deletePost:focus {
-  user-select: auto;
-}
-
 .blog--deletePost:hover:not(:disabled) {
     filter: brightness(1.1);
     -webkit-filter: brightness(1.1);
   }
   
-.blog--deletePost:disabled {
-    cursor: auto;
-  }

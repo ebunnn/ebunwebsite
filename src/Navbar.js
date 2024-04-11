@@ -36,7 +36,7 @@ export default function Navbar({isAuth, setIsAuth}) {
                     <li><a href="https://linkedin.com/in/ebun-oludemi" target="_blank" rel="noreferrer">LinkedIn</a></li>
                     <li><a href="javascript:void(0);"><Link to="/projects">Projects</Link></a></li>
                     <li><a href="javascript:void(0);"><Link to="/blog">Blog</Link></a></li>
-                    <li><a href="javascript:void(0);">{!isAuth ? <Link to="/login">Login</Link> : <button onClick={signUserOut}>Log Out</button>}</a></li>
+                    <li>{!isAuth ? <a href="javascript:void(0);"><Link to="/login">Login</Link></a> : <a href="javascript:void(0);" onClick={signUserOut}>Log Out</a>} </li>
                 </ul>
                 <button className="navbar--bars navbar--close" onClick={showNavBar}> 
                         <FontAwesomeIcon icon={faTimes} />

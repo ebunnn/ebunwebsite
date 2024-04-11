@@ -30,7 +30,6 @@
 }
 
 
-/* CSS */
 .body--button {
   appearance: button;
   background-color: rgba(216, 191, 216, 0.4);
@@ -78,6 +77,10 @@
   z-index: -1;
 }
 
+.body--button a {
+    color: #FFFFFF;
+}
+
 .body--button:main,
 .body--button:focus {
   user-select: auto;
@@ -109,7 +112,6 @@
     filter: drop-shadow(12px 12px 12px rgba(255, 255, 255, 0.155));
     position: relative;
     right: 4vw;
-    /* box-shadow: 5px 8px 16px 7px rgba(255, 255, 255, 0.2) */
   }
 
   .body--space {
@@ -133,9 +135,6 @@
 }
 
 
-/* .elfsight-app-225e036c-006b-4e86-bf3f-46271e0253dd {
-    margin-top: 10%;
-} */
 @media only screen and (max-width : 967px) {
     .body--name {
         font-size: 35px;
@@ -173,11 +172,5 @@
         font-size: 30px;
     }
 }
-
-/* @media only screen and (max-width : 450px) {
-    .elfsight-app-225e036c-006b-4e86-bf3f-46271e0253dd {
-        padding: 20%;
-    }
-} */
 
 

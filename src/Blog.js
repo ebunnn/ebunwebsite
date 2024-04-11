@@ -1,38 +1,49 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./Blog.css"
 import {Link} from "react-router-dom";
+import axios from 'axios';
 import { collection, deleteDoc, getDocs, doc } from "firebase/firestore";
 import {db, auth } from "./firebase-config"
 
 
 export default function Blog({isAuth}) {
 
-    const [postLists, setPostList] = React.useState([]);
-    const postsCollectionRef = collection(db, "blogPosts");
+    const [posts, setPosts] = useState([]);
+
+    const fetchPosts = async () => {
+        try {
+            const response = await axios.get("http://localhost:4000/api/get-posts");
+            setPosts(response.data);
+            console.log(posts)
+        } catch (error) {
+            console.error('Error fetching posts:', error);
+        }
+    };
+
+    const handleDelete = async (postId) => {
+        try {
+            await axios.delete(`http://localhost:4000/api/delete-post/${postId}`);
+            setPosts(posts.filter(post => post._id !== postId));
+        } catch (error) {
+            console.error('Error deleting post:', error);
+        }
+    };
 
     useEffect(() => {
-        const getPosts = async () => {
-            const data = await getDocs(postsCollectionRef);
-            setPostList(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
-        };
-        getPosts();
-    });
+        fetchPosts();
+    }, []);
 
-    const deletePost = async (id) => {
-        const postDoc = doc(db, "blogPosts", id);
 
-        await deleteDoc(postDoc);
-    };
     return(
         <div className="blog--container">
             <h1 className="blog--welcome">Blogs</h1>
             <p className="blog--description">Hello! Welcome to my Blogs page. Feel free to read through the blogs or add one of your own!</p>
             {/* If the user is logged in, then display the "create blog post" link, if not, dont display it */}
-            <button className="blog--createPostButton" role="button"> {!isAuth ? <p></p> : <Link to="/create-blog-post">Create Blog Post</Link>}</button>
-            {/* {!isAuth ? <p></p> : <Link to="/create-blog-post">Create Blog Post</Link>} */}
-            {postLists.map((post) => {
+            {/* <button className="blog--createPostButton" role="button"> <Link to="/create-post">Create Blog Post</Link></button> */}
+            <button className="blog--createPostButton" role="button"> {!isAuth ? <p></p> : <Link to="/create-post">Create Blog Post</Link>}</button>
+            {posts.map(post => {
                 return (
-                    <div className="blog--container">
+                    <div className="blog--posts-container">
                         <br></br>
                         <br></br>
                         <hr></hr>
@@ -40,25 +51,17 @@ export default function Blog({isAuth}) {
                         <div className="blog--title"><h3>{post.title}</h3></div>
                         <div className="blog--postText">
                             <p>{post.postText}</p>
-                            {/* <h5>Written by: {post.author.name}</h5> */}
                         </div>
                         <div className="blog--postDetails">
-                            <h5>Written by: {post.author.name}</h5>
-                            {isAuth && post.author.id === auth.currentUser.uid && <button className="blog--deletePost" onClick={() => {deletePost(post.id)}}>Delete</button>}
+                            <h5>Written by: {auth.currentUser.displayName}</h5>
                             <p>{post.date}</p>
                             <p>{post.time}</p>
+                            <button onClick={() => handleDelete(post._id)}>Delete</button>                       
                         </div>
-                        {/* <div className="blog--deletePost">
-                            {isAuth && post.author.id === auth.currentUser.uid && <button onClick={() => {deletePost(post.id)}}>Delete</button>}
-                        </div> */}
-                        {/* <div className="blog--dateTime">
-                            <p>{post.date}</p>
-                            <p>{post.time}</p>
-                        </div> */}
-                       
                     </div>
                 )
             })}
+            
         </div>
     )
 }
