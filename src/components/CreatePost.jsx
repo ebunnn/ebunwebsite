@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "./CreatePost.css"
+import "../css/CreatePost.css"
 import { useNavigate } from "react-router-dom";
 
-export default function CreatePost({isAuth}) {
+export default function CreatePost({user, setUser}) {
     const [title, setTitle] = useState("");
     const [postText, setPostText] = useState("");
 
@@ -12,23 +12,21 @@ export default function CreatePost({isAuth}) {
     
     const handleSubmit = async (e) => {
       e.preventDefault();
+      const postPayload = { userID: user.sub, title, postText, author: user.name };
+      console.log("Post Payload:", postPayload);
       try {
-          const response = await axios.post('http://localhost:4000/api/post-blog', { title, postText });
+          const response = await axios.post('http://localhost:4000/api/post-blog', { userID: user.sub, title, postText, author: user.name});
           console.log('Post created successfully:', response.data);
           setTitle('');
           setPostText('');
-          alert("Post created!");
           navigate("/blog");
       } catch (error) {
           console.error('Failed to create post:', error);
       }
   };
 
-  useEffect(() => {
-    if (!isAuth) {
-      navigate("/login");
-    }
-  }, []);
+  console.log("Username: " + user.name)
+
     return (
         <div className="createPostPage">
       <div className="cpContainer">

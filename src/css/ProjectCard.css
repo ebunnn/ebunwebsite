@@ -1,8 +1,4 @@
-a {
-    text-decoration: none;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    color: rgba(216, 191, 216, 0.8);
-}
+
 
 .projectCard--container {
     display: flex;

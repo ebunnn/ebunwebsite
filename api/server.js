@@ -23,9 +23,13 @@ mongoose.connect(connectionURI).then(() => {
 
 app.post('/api/post-blog', async (req, res) => {
   try {
+      console.log("Received Post Data:", req.body);
       const newPost = new Post({
           title: req.body.title,
-          postText: req.body.postText
+          postText: req.body.postText, 
+          author: req.body.author,
+          date: req.body.date,
+          time: req.body.time,
       });
       await newPost.save();
       res.status(201).send('Post created successfully');

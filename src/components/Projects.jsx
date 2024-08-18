@@ -1,11 +1,11 @@
 import React from 'react';
-import "./Projects.css";
+import "../css/Projects.css";
 import ProjectCard from './ProjectCard';
-import sogrem from "./images/sogremSS.png";
-import prepAI from "./images/prepAIimg.png"
-import newsSearch from "./images/newsSearchImg.png"
-import newsSearch2 from "./images/newsImg.png"
-import ebunWeb from "./images/ebunWebImg.png"
+import sogrem from "../images/sogremSS.png";
+import prepAI from "../images/prepAIimg.png"
+import newsSearch from "../images/newsSearchImg.png"
+import newsSearch2 from "../images/newsImg.png"
+import ebunWeb from "../images/ebunWebImg.png"
 
 export default function Projects() {
 
@@ -40,9 +40,12 @@ export default function Projects() {
   of my projects, noteworthy achievements, and relevant social media links. Feel free to look around!"
 
   return (
-    <div>
-      <h1 className="projects--title">My Projects!</h1>
-      <p style={{color: "white"}}>Here are *some* of my projects!</p>
+    <div className='flex flex-col gap-4'>
+      <div className='flex flex-col gap-6'>
+        <h1 className="text-5xl text-[#C4A6D8] font-bold">My Projects!</h1>
+        <p>Here are *some* of my projects!</p>
+      </div>
+     
       <ProjectCard title="Sogrem Associates Website" image={sogrem} description={sogremDescription} projectLink="https://sogrem.com"/>
 
       <ProjectCard title="PrepAI Website" image={prepAI} description={prepAIDescription} projectLink="https://github.com/rdl4199/BuffPrepAI"/>
